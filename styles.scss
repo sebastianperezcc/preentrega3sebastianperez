@@ -1,0 +1,102 @@
+$primary-color: #46a3f0;
+$navbar-bg-color: #f31212;
+$text-color: #f8f8f8;
+$header-bg-color: #000000;
+$link-color: #007bff;
+$link-hover-color: #f00;
+
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: $header-bg-color;
+    color: white;
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+
+        &:hover {
+            background-color: rgb(163, 162, 162);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+#banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+#slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 300%;
+    animation: slider-animation 15s linear infinite;
+}
+
+img {
+    width: 33.33%;
+    height: auto;
+}
+
+@keyframes slider-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    33.33% {
+        transform: translateX(-100%);
+    }
+
+    66.66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+.navbar {
+    background-color: $navbar-bg-color;
+
+    .nav-link {
+        color: $text-color;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $primary-color;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+
+.py-3 {
+    background-color: rgb(27, 27, 27);
+    color: gray;
+}
